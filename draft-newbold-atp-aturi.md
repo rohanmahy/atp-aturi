@@ -9,7 +9,7 @@ number:
 date:
 consensus:
 v: 3
-area: "Applications and Real-Time Area"
+area: "Applications and Real-Time"
 workgroup: "Authenticated Transfer"
 keyword:
  - atproto
@@ -18,9 +18,9 @@ venue:
   group: "Authenticated Transfer"
   type: "Working Group"
   mail: "atp@ietf.org"
-  arch: "https://mailarchive.ietf.org/arch/browse/atp/"
-  github: "ietf-wg-atp/atp-aturi"
-  latest: "https://ietf-wp-atp.github.io/atp-aturi/draft-newbold-atp-aturi.html"
+  arch: "https://mailarchive.ietf.org/arch/browse/atp"
+  github: "rohanmahy/atp-aturi"
+  latest: "https://rohanmahy.github.io/atp-aturi/draft-newbold-atp-aturi.html"
 
 author:
  -
