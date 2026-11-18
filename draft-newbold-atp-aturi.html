@@ -4,16 +4,15 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>TODO - Your title</title>
-<meta content="Your Name Here" name="author">
-<meta content="
-       TODO Abstract 
-    " name="description">
+<title>The "at" Identifier Scheme</title>
+<meta content="Bryan Newbold" name="author">
+<meta content='
+       This document defines the "at" identifier scheme, which is used to reference accounts and data records in the Authenticated Transfer Protocol. 
+    ' name="description">
 <meta content="xml2rfc 3.35.0" name="generator">
-<meta content="next generation" name="keyword">
-<meta content="unicorn" name="keyword">
-<meta content="AI-native" name="keyword">
-<meta content="draft-todo-yourname-protocol-latest" name="ietf.draft">
+<meta content="atproto" name="keyword">
+<meta content="AT Protocol" name="keyword">
+<meta content="draft-newbold-atp-aturi-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.35.0
     Python 3.14.10
@@ -29,7 +28,7 @@
     requests 2.33.1
     wcwidth 0.9.4
 -->
-<link href="draft-todo-yourname-protocol.xml" rel="alternate" type="application/rfc+xml">
+<link href="draft-newbold-atp-aturi.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
 <style type="text/css">@font-face {
   font-family: 'Lora';
@@ -1042,11 +1041,11 @@ svg {
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
-<td class="center">TODO - Abbreviation</td>
+<td class="center">AT Identifier</td>
 <td class="right">November 2026</td>
 </tr></thead>
 <tfoot><tr>
-<td class="left">Here</td>
+<td class="left">Newbold</td>
 <td class="center">Expires 22 May 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
@@ -1055,30 +1054,30 @@ svg {
 <div id="internal-metadata" class="document-information">
 <dl id="identifiers">
 <dt class="label-workgroup">Workgroup:</dt>
-<dd class="workgroup">WG Working Group</dd>
+<dd class="workgroup">Authenticated Transfer</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
-<dd class="internet-draft">draft-todo-yourname-protocol-latest</dd>
+<dd class="internet-draft">draft-newbold-atp-aturi-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
 <time datetime="2026-11-18" class="published">18 November 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
-<dd class="intended-status">Informational</dd>
+<dd class="intended-status">Historic</dd>
 <dt class="label-expires">Expires:</dt>
 <dd class="expires"><time datetime="2027-05-22">22 May 2027</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
-      <div class="author-name">Y. N. Here</div>
-<div class="org">Your Organization Here</div>
+      <div class="author-name">B. Newbold</div>
+<div class="org">Bluesky Social</div>
 </div>
 </dd>
 </dl>
 </div>
-<h1 id="title">TODO - Your title</h1>
+<h1 id="title">The "at" Identifier Scheme</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">TODO Abstract<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document defines the "at" identifier scheme, which is used to reference accounts and data records in the Authenticated Transfer Protocol.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1086,14 +1085,15 @@ svg {
       </h2>
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
-        The latest revision of this draft can be found at <span><a href="https://example.com/LATEST">https://example.com/LATEST</a></span>.
-        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-todo-yourname-protocol/">https://datatracker.ietf.org/doc/draft-todo-yourname-protocol/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+        The latest revision of this draft can be found at <span><a href="https://ietf-wp-atp.github.io/atp-aturi/draft-newbold-atp-aturi.html">https://ietf-wp-atp.github.io/atp-aturi/draft-newbold-atp-aturi.html</a></span>.
+        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-newbold-atp-aturi/">https://datatracker.ietf.org/doc/draft-newbold-atp-aturi/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 <p id="section-note.1-3">
         Discussion of this document takes place on the
-        WG Working Group mailing list (<span><a href="mailto:WG@example.com">mailto:WG@example.com</a></span>),
-        which is archived at <span><a href="https://example.com/WG">https://example.com/WG</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
+        Authenticated Transfer Working Group mailing list (<span><a href="mailto:atp@ietf.org">mailto:atp@ietf.org</a></span>),
+        which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/atp/">https://mailarchive.ietf.org/arch/browse/atp/</a></span>.
+        Subscribe at <span><a href="https://www.ietf.org/mailman/listinfo/atp/">https://www.ietf.org/mailman/listinfo/atp/</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
 <p id="section-note.1-4">Source for this draft and an issue tracker can be found at
-        <span><a href="https://github.com/USER/REPO">https://github.com/USER/REPO</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
+        <span><a href="https://github.com/ietf-wg-atp/atp-aturi">https://github.com/ietf-wg-atp/atp-aturi</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1147,22 +1147,46 @@ svg {
             <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
-            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
+            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-structure" class="internal xref">Structure</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-syntax" class="internal xref">Syntax</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
+                <p id="section-toc.1-1.3.2.1.1" class="keepWithNext"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-record-references" class="internal xref">Record References</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-examples" class="internal xref">Examples</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-uri-scheme-registration" class="internal xref">URI Scheme Registration</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-references" class="internal xref">References</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1">
+                <p id="section-toc.1-1.7.2.1.1"><a href="#section-7.1" class="auto internal xref">7.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.2">
+                <p id="section-toc.1-1.7.2.2.1"><a href="#section-7.2" class="auto internal xref">7.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
+            <p id="section-toc.1-1.8.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
+            <p id="section-toc.1-1.9.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
 </li>
         </ul>
 </nav>
@@ -1173,51 +1197,254 @@ svg {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">TODO Introduction<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">The Authenticated Transfer Protocol enables the creation of decentralized networks for publication of self-certifying data. An introduction to the overall protocol architecture is given in <span>[<a href="#AT-ARCH" class="cite xref">AT-ARCH</a>]</span>, and the data repository and synchronization mechanisms are described in <span>[<a href="#AT-REPOSYNC" class="cite xref">AT-REPOSYNC</a>]</span>.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">Each account has a global permanent account identifier that can be resolved to a network hosting location and to public key material. Multiple account identifier systems are supported, but details are out of scope for this document. Accounts publish structured data records of different application-defined types in data repositories. Each account has a single repository for all of its public data records, organized in collections by record type, with one or more records in each collection.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">Individual records can be globally referenced by account, collection, and record key. Records themselves may include references to other records, forming a global data graph. Record references can be resolved to fetch individual records. They can also be used when annotating records for the purpose of content moderation.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">This document describes a string identifier syntax for referencing data records and entire accounts.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-5">The identifier syntax described in this version of the document does not comply with the <span>[<a href="#RFC3986" class="cite xref">RFC3986</a>]</span> generic Uniform Resource Identifier (URI) requirements. Using account identifiers with multiple colons in the authority section violates the generic syntax rules for URI schemes using the double-slash prefix (<code>//</code>), which this version uses. This means the identifier syntax described in this document is not eligible for permanent registration in the IANA URI Registry under <span>[<a href="#RFC7595" class="cite xref">RFC7595</a>]</span>.<a href="#section-1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="conventions-and-definitions">
+<div id="structure">
 <section id="section-2">
-      <h2 id="name-conventions-and-definitions">
-<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-conventions-and-definitions" class="section-name selfRef">Conventions and Definitions</a>
+      <h2 id="name-structure">
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-structure" class="section-name selfRef">Structure</a>
       </h2>
-<p id="section-2-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
-"<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
-described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
-appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
+<p id="section-2-1">The generic structure of an "at" identifier is:<a href="#section-2-1" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-2-2">
+<pre>
+"at://" ACCOUNT-AUTHORITY [ PATH ] [ "?" QUERY ] [ "#" FRAGMENT ]
+</pre><a href="#section-2-2" class="pilcrow">¶</a>
+</div>
+<p id="section-2-3">The required authority section references an account. It may be a permanent account identifier or an account handle. An identifier that only includes the authority section can be used as a reference to an overall account. Handles in the authority section are discouraged in most other use cases; see <a href="#security" class="auto internal xref">Section 5</a>.<a href="#section-2-3" class="pilcrow">¶</a></p>
+<p id="section-2-4">Except for the authority syntax noted in <a href="#intro" class="auto internal xref">Section 1</a>, the structure aligns with the generic structure and semantics described in Section 3 of <span>[<a href="#RFC3986" class="cite xref">RFC3986</a>]</span>. An empty authority section is not allowed. Userinfo is not supported in the authority section, and host/port separation with a colon character is not used. The query and fragment sections have no defined semantics and are reserved for future use.<a href="#section-2-4" class="pilcrow">¶</a></p>
+<p id="section-2-5">The path section can be used to reference a specific resource controlled by the account authority. A common use case is to reference an individual data record from the account's public data repository:<a href="#section-2-5" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-2-6">
+<pre>
+"at://" ACCOUNT-AUTHORITY "/" COLLECTION "/" RECORD-KEY
+</pre><a href="#section-2-6" class="pilcrow">¶</a>
+</div>
+<p id="section-2-7">The collection part indicates the data record type (schema), and the record key identifies the individual record. The path section matches the path under which records are stored in the repository data structure described in <span>[<a href="#AT-REPOSYNC" class="cite xref">AT-REPOSYNC</a>]</span>.<a href="#section-2-7" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="syntax">
+<section id="section-3">
+      <h2 id="name-syntax">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-syntax" class="section-name selfRef">Syntax</a>
+      </h2>
+<p id="section-3-1">The overall "at" identifier encoded string length limit is 8192 ASCII characters. They MUST NOT include a trailing slash.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">The authority section can contain either a permanent account identifier or an account handle. The syntax of specific account identifier systems is out of scope for this document, but a few generic syntax restrictions apply to all such identifiers:<a href="#section-3-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3-3.1">
+          <p id="section-3-3.1.1">the account identifier string is ASCII, containing letters (A-Z, a-z), digits (0-9), period (<code>.</code>), hyphen (<code>-</code>), underscore (<code>_</code>), and colon (<code>:</code>)<a href="#section-3-3.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-3.2">
+          <p id="section-3-3.2.1">other ASCII characters may be represented with percent encoding (percent character <code>%</code> followed by two hexadecimal characters)<a href="#section-3-3.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-3.3">
+          <p id="section-3-3.3.1">must not end in a colon (<code>:</code>)<a href="#section-3-3.3.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-3.4">
+          <p id="section-3-3.4.1">length (including percent encoding) is between 1 and 2048 characters<a href="#section-3-3.4.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-3.5">
+          <p id="section-3-3.5.1">MUST NOT be a simple account handle<a href="#section-3-3.5.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<p id="section-3-4">The account handle system is out of scope for this document, but the handle syntax is as follows:<a href="#section-3-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3-5.1">
+          <p id="section-3-5.1.1">at most 253 ASCII characters in total<a href="#section-3-5.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-5.2">
+          <p id="section-3-5.2.1">consists of multiple segments separated by periods (<code>.</code>)<a href="#section-3-5.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-5.3">
+          <p id="section-3-5.3.1">empty segments and leading or trailing periods are not allowed<a href="#section-3-5.3.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-5.4">
+          <p id="section-3-5.4.1">there must be at least two segments, and thus at least one period ("bare" top-level domains are not allowed)<a href="#section-3-5.4.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-5.5">
+          <p id="section-3-5.5.1">each segment must have between 1 and 63 characters, consisting of lower-case letters (a-z), digits (0-9), and hyphens (<code>-</code>)<a href="#section-3-5.5.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-5.6">
+          <p id="section-3-5.6.1">segments cannot begin or end with hyphens<a href="#section-3-5.6.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-3-5.7">
+          <p id="section-3-5.7.1">the last segment must not start with a digit<a href="#section-3-5.7.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<p id="section-3-6">Handles MUST be normalized to lower-case when included in "at" identifiers.<a href="#section-3-6" class="pilcrow">¶</a></p>
+<div id="record-ref">
+<section id="section-3.1">
+        <h3 id="name-record-references">
+<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-record-references" class="section-name selfRef">Record References</a>
+        </h3>
+<p id="section-3.1-1">An "at" identifier referencing a record has additional syntax restrictions. It has exactly two path segments, and must not include query parameters.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.1-2">The first path component must be a valid Namespace Identifier (NSID) string, as defined in Appendix D of <span>[<a href="#AT-REPOSYNC" class="cite xref">AT-REPOSYNC</a>]</span>. A non-normative summary of that syntax is:<a href="#section-3.1-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3.1-3.1">
+            <p id="section-3.1-3.1.1">at most 317 ASCII characters in length<a href="#section-3.1-3.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-3.2">
+            <p id="section-3.1-3.2.1">overall NSID is case-sensitive<a href="#section-3.1-3.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-3.3">
+            <p id="section-3.1-3.3.1">"domain authority" part (reverse-order DNS hostname, with at least two segments separated by periods) separated from a final "name" part by a period (<code>.</code>)<a href="#section-3.1-3.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-3.4">
+            <p id="section-3.1-3.4.1">domain authority segments are each between 1 and 63 characters; consist of ASCII lower-case letters (a-z), digits (0-9), and hyphens (<code>-</code>); must not start or end with a hyphen; the first segment must not start with a digit<a href="#section-3.1-3.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-3.5">
+            <p id="section-3.1-3.5.1">the final name part is between 1 and 63 characters; consists of ASCII alphanumerics (A-Z, a-z, 0-9); must not start with a digit<a href="#section-3.1-3.5.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-3.1-4">The second path component is a Record Key string, with syntax defined in Section 3.1 of <span>[<a href="#AT-REPOSYNC" class="cite xref">AT-REPOSYNC</a>]</span>. A non-normative summary of that syntax is:<a href="#section-3.1-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3.1-5.1">
+            <p id="section-3.1-5.1.1">length between 1 and 512 ASCII characters<a href="#section-3.1-5.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-5.2">
+            <p id="section-3.1-5.2.1">consists of alphanumerics (A-Z, a-z, 0-9), period (<code>.</code>), hyphen (<code>-</code>), underscore (<code>_</code>), colon (<code>:</code>), and tilde (<code>~</code>)<a href="#section-3.1-5.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-5.3">
+            <p id="section-3.1-5.3.1">case-sensitive<a href="#section-3.1-5.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-5.4">
+            <p id="section-3.1-5.4.1">literal values <code>.</code> and <code>..</code> are forbidden<a href="#section-3.1-5.4.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+</section>
+</div>
+</section>
+</div>
+<div id="examples">
+<section id="section-4">
+      <h2 id="name-examples">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-examples" class="section-name selfRef">Examples</a>
+      </h2>
+<p id="section-4-1">The following are valid "at" identifiers referencing accounts:<a href="#section-4-1" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-4-2">
+<pre>
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2
+at://handle.example.com
+</pre><a href="#section-4-2" class="pilcrow">¶</a>
+</div>
+<p id="section-4-3">The following are invalid "at" identifiers under the syntax defined in this document:<a href="#section-4-3" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-4-4">
+<pre>
+# trailing slash
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/
+
+# userinfo
+at://user:pass@did:plc:foxkcdp2jhdxd75z7uuqu3s2
+
+# @-sign
+at://@handle.example.com
+</pre><a href="#section-4-4" class="pilcrow">¶</a>
+</div>
+<p id="section-4-5">The following are valid "at" identifiers referencing a record:<a href="#section-4-5" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-4-6">
+<pre>
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.record/3mwp2ezf3fh22
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.more-sections.record/3mwp2ezf3fh22
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.otherRecordV2/3mwp2ezf3fh22
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.record/...
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.record/~home
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.r/1
+</pre><a href="#section-4-6" class="pilcrow">¶</a>
+</div>
+<p id="section-4-7">The following are invalid record references (though they may be valid generic "at" identifiers):<a href="#section-4-7" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-4-8">
+<pre>
+# disallowed record keys
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.record/..
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.record/one@two
+
+# disallowed NSIDs
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/example/3mwp2ezf3fh22
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example/3mwp2ezf3fh22
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.EXAMPLE.record/3mwp2ezf3fh22
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/123.example.record/3mwp2ezf3fh22
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.bad-record/3mwp2ezf3fh22
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.record-/3mwp2ezf3fh22
+
+# trailing slash (invalid identifier)
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.record/3mwp2ezf3fh22/
+
+# query section (not supported for record references)
+at://did:plc:foxkcdp2jhdxd75z7uuqu3s2/com.example.record/3mwp2ezf3fh22?key=value
+</pre><a href="#section-4-8" class="pilcrow">¶</a>
+</div>
 </section>
 </div>
 <div id="security">
-<section id="section-3">
+<section id="section-5">
       <h2 id="name-security-considerations">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-3-1">TODO Security<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-5-1">Record references that use account handles instead of permanent account identifiers can have the authority of the reference change over time. Such references should be resolved to a permanent account identifier before being persisted to long-term storage. References stored in record data should always use permanent account identifiers.<a href="#section-5-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana">
-<section id="section-4">
+<section id="section-6">
       <h2 id="name-iana-considerations">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-4-1">This document has no IANA actions.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<div id="uri-scheme-registration">
+<section id="section-6.1">
+        <h3 id="name-uri-scheme-registration">
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-uri-scheme-registration" class="section-name selfRef">URI Scheme Registration</a>
+        </h3>
+<p id="section-6.1-1">As noted in <a href="#intro" class="auto internal xref">Section 1</a>, the identifier syntax described in this version of the document is not eligible for permanent registration in the IANA URI Registry under <span>[<a href="#RFC7595" class="cite xref">RFC7595</a>]</span>.<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+<p id="section-6.1-2">If it were, registration metadata would be included in this section.<a href="#section-6.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="sec-normative-references">
-<section id="section-5">
-      <h2 id="name-normative-references">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+</section>
+</div>
+<div id="sec-combined-references">
+<section id="section-7">
+      <h2 id="name-references">
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
+<div id="sec-normative-references">
+<section id="section-7.1">
+        <h3 id="name-normative-references">
+<a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+        </h3>
 <dl class="references">
-<dt id="RFC2119">[RFC2119]</dt>
-      <dd>
-<span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
+<dt id="AT-REPOSYNC">[AT-REPOSYNC]</dt>
+        <dd>
+<span class="refAuthor">Holmgren, D.</span> and <span class="refAuthor">B. Newbold</span>, <span class="refTitle">"Authenticated Transfer: Repository and Synchronization"</span>, <time datetime="2026-09" class="refDate">September 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/draft-holmgren-at-repository/">https://datatracker.ietf.org/doc/draft-holmgren-at-repository/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC8174">[RFC8174]</dt>
-    <dd>
-<span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
+<dt id="RFC3986">[RFC3986]</dt>
+        <dd>
+<span class="refAuthor">Berners-Lee, T.</span>, <span class="refAuthor">Fielding, R.</span>, and <span class="refAuthor">L. Masinter</span>, <span class="refTitle">"Uniform Resource Identifier (URI): Generic Syntax"</span>, <span class="seriesInfo">STD 66</span>, <span class="seriesInfo">RFC 3986</span>, <span class="seriesInfo">DOI 10.17487/RFC3986</span>, <time datetime="2005-01" class="refDate">January 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3986">https://www.rfc-editor.org/rfc/rfc3986</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC7595">[RFC7595]</dt>
+      <dd>
+<span class="refAuthor">Thaler, D., Ed.</span>, <span class="refAuthor">Hansen, T.</span>, and <span class="refAuthor">T. Hardie</span>, <span class="refTitle">"Guidelines and Registration Procedures for URI Schemes"</span>, <span class="seriesInfo">BCP 35</span>, <span class="seriesInfo">RFC 7595</span>, <span class="seriesInfo">DOI 10.17487/RFC7595</span>, <time datetime="2015-06" class="refDate">June 2015</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7595">https://www.rfc-editor.org/rfc/rfc7595</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
+</section>
+</div>
+<div id="sec-informative-references">
+<section id="section-7.2">
+        <h3 id="name-informative-references">
+<a href="#section-7.2" class="section-number selfRef">7.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+        </h3>
+<dl class="references">
+<dt id="AT-ARCH">[AT-ARCH]</dt>
+        <dd>
+<span class="refAuthor">Newbold, B.</span> and <span class="refAuthor">D. Holmgren</span>, <span class="refTitle">"Authenticated Transfer: Architecture Overview"</span>, <time datetime="2026-03" class="refDate">March 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/draft-newbold-at-architecture">https://datatracker.ietf.org/doc/draft-newbold-at-architecture</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="ATPAPER">[ATPAPER]</dt>
+      <dd>
+<span class="refAuthor">Kleppmann, M.</span>, <span class="refAuthor">Frazee, P.</span>, <span class="refAuthor">Gold, J.</span>, <span class="refAuthor">Graber, J.</span>, <span class="refAuthor">Holmgren, D.</span>, <span class="refAuthor">Ivy, D.</span>, <span class="refAuthor">Johnson, J.</span>, <span class="refAuthor">Newbold, B.</span>, and <span class="refAuthor">J. Volpert</span>, <span class="refTitle">"Bluesky and the AT Protocol: Usable Decentralized Social Media"</span>, <time datetime="2024-12" class="refDate">December 2024</time>, <span>&lt;<a href="https://doi.org/10.1145/3694809.3700740">https://doi.org/10.1145/3694809.3700740</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+</div>
 </section>
 </div>
 <div id="acknowledgments">
@@ -1225,7 +1452,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-acknowledgments">
 <a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
       </h2>
-<p id="appendix-A-1">TODO acknowledge.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<p id="appendix-A-1">This document is based on the original Authenticated Transfer design work by Paul Frazee and Daniel Holmgren, as described in <span>[<a href="#ATPAPER" class="cite xref">ATPAPER</a>]</span>.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
@@ -1234,11 +1461,11 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
       </h2>
 <address class="vcard">
-        <div dir="auto" class="left"><span class="fn nameRole">Your Name Here</span></div>
-<div dir="auto" class="left"><span class="org">Your Organization Here</span></div>
+        <div dir="auto" class="left"><span class="fn nameRole">Bryan Newbold</span></div>
+<div dir="auto" class="left"><span class="org">Bluesky Social</span></div>
 <div class="email">
 <span>Email:</span>
-<a href="mailto:your.email@example.com" class="email">your.email@example.com</a>
+<a href="mailto:bnewbold@robocracy.org" class="email">bnewbold@robocracy.org</a>
 </div>
 </address>
 </section>
